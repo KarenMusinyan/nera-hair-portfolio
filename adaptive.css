@@ -1,0 +1,518 @@
+/* Responsive finishing pass: desktop, laptop, tablet and phone. */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+img,
+select,
+input,
+button {
+  max-width: 100%;
+}
+
+.hero-img,
+.hero-content,
+.story-sticky,
+.works > .grid {
+  height: 100svh;
+}
+
+.hero-img {
+  top: clamp(18px, 2.2vh, 26px);
+  height: calc(100svh - clamp(18px, 2.2vh, 26px));
+  transform: scale(calc(1 + var(--p) * .018)) translateY(calc(var(--p) * 1vh));
+}
+
+.works .grid figure,
+.works .grid figure:nth-child(even) {
+  width: min(74vw, 112.2vh, 1180px);
+  height: auto;
+  aspect-ratio: 1.65 / 1;
+}
+
+@media (min-width: 1700px) {
+  header {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .hero-content {
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+  }
+
+  .hero h1 {
+    max-width: 1050px;
+  }
+
+  .intro,
+  .booking {
+    padding-left: max(7vw, calc((100vw - 1640px) / 2));
+    padding-right: max(7vw, calc((100vw - 1640px) / 2));
+  }
+}
+
+@media (max-width: 1500px) {
+  .hero-content {
+    padding-left: 6.5vw;
+    padding-right: 6.5vw;
+  }
+
+  .hero h1 {
+    font-size: clamp(58px, 7.25vw, 108px);
+    margin: clamp(42px, 6vh, 62px) 0;
+  }
+
+  .intro h2,
+  .booking h2 {
+    font-size: clamp(48px, 6.2vw, 88px);
+  }
+}
+
+@media (max-width: 1100px) {
+  header {
+    padding-left: 4.5vw;
+    padding-right: 4.5vw;
+  }
+
+  .hero-content {
+    padding: 130px 6vw 50px;
+  }
+
+  .hero h1 {
+    max-width: 760px;
+    font-size: clamp(58px, 8vw, 88px);
+  }
+
+  .hero-content div {
+    max-width: 820px;
+  }
+
+  .story-sticky {
+    grid-template-columns: 34% 1fr;
+    gap: 4%;
+    padding: 6% 5%;
+  }
+
+  .story-copy h2 {
+    font-size: clamp(38px, 4.8vw, 58px);
+  }
+
+  .intro {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .intro article {
+    grid-column: 7 / 13;
+  }
+
+  .booking {
+    gap: 7%;
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .booking form {
+    padding: 36px;
+  }
+
+  .works .grid figure,
+  .works .grid figure:nth-child(even) {
+    width: min(82vw, 112.2vh, 980px);
+  }
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 17px 5vw;
+  }
+
+  nav {
+    gap: 18px;
+  }
+
+  nav a:not(.button) {
+    display: none;
+  }
+
+  .hero-content {
+    padding: 120px 6vw 46px;
+  }
+
+  .hero h1 {
+    max-width: 700px;
+    font-size: clamp(56px, 10vw, 82px);
+  }
+
+  .hero-content div {
+    max-width: 700px;
+  }
+
+  .story-sticky {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(24px, 4vh, 42px);
+    min-height: 0;
+    padding: 88px 6vw 42px;
+  }
+
+  .story-copy {
+    width: min(100%, 700px);
+    margin: 0 auto;
+    transform: translateY(calc((.5 - var(--story-progress, 0)) * 28px));
+  }
+
+  .story-copy h2 {
+    margin: 20px 0 0;
+    font-size: clamp(38px, 6.8vw, 56px);
+  }
+
+  .story-frame {
+    width: min(100%, 700px);
+    flex: 0 1 auto;
+  }
+
+  .story-progress {
+    left: 6vw;
+    right: 6vw;
+    bottom: 24px;
+    width: auto;
+  }
+
+  .intro {
+    display: block;
+    min-height: auto;
+    padding: 12vh 6vw;
+  }
+
+  .intro h2 {
+    margin-top: 38px;
+    transform: none;
+    font-size: clamp(48px, 8vw, 68px);
+  }
+
+  .intro article {
+    max-width: 620px;
+    margin: 54px 0 0;
+  }
+
+  .about-visual {
+    width: min(100%, 620px);
+    margin-top: 62px;
+  }
+
+  .about-crop {
+    height: min(54vh, 500px);
+  }
+
+  .booking {
+    display: block;
+    min-height: auto;
+    padding: 13vh 6vw;
+  }
+
+  .booking > div:not(.booking-motion) {
+    transform: none;
+  }
+
+  .booking h2 {
+    font-size: clamp(48px, 8.5vw, 70px);
+  }
+
+  .booking form {
+    width: min(100%, 700px);
+    margin-top: 64px;
+  }
+
+  .works {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .works .grid figure,
+  .works .grid figure:nth-child(even) {
+    width: min(90vw, 101vh, 820px);
+  }
+
+  .quote {
+    min-height: 78svh;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    font-size: clamp(40px, 7.5vw, 64px);
+  }
+}
+
+@media (max-width: 700px) {
+  .logo {
+    font-size: 22px;
+  }
+
+  .button {
+    padding: 11px 14px;
+  }
+
+  .hero {
+    height: 108svh;
+    min-height: 650px;
+  }
+
+  .hero-img {
+    top: 14px;
+    height: calc(100svh - 14px);
+    transform: scale(calc(1 + var(--p) * .014)) translateY(calc(var(--p) * .7vh));
+  }
+
+  .hero-content {
+    justify-content: center;
+    padding: 108px 6vw 38px;
+  }
+
+  .hero h1 {
+    max-width: 92vw;
+    margin: clamp(34px, 5.5vh, 50px) 0;
+    font-size: clamp(48px, 14.2vw, 70px);
+    line-height: .88;
+  }
+
+  .hero-content div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .hero-content div a {
+    justify-self: start;
+  }
+
+  .transformation {
+    height: 370vh;
+  }
+
+  .story-sticky {
+    justify-content: flex-start;
+    gap: 22px;
+    padding: 96px 6vw 44px;
+  }
+
+  .story-copy h2 {
+    font-size: clamp(36px, 11vw, 48px);
+  }
+
+  .story-frame {
+    width: min(100%, 520px);
+    max-height: calc(100svh - 280px);
+  }
+
+  .intro {
+    padding: 11vh 6vw;
+  }
+
+  .intro h2 {
+    font-size: clamp(42px, 12.5vw, 58px);
+  }
+
+  .intro article {
+    margin-top: 44px;
+  }
+
+  .about-visual {
+    margin-top: 52px;
+  }
+
+  .about-crop {
+    height: min(56vh, 470px);
+  }
+
+  .works {
+    height: 370vh;
+    padding: 0 14px;
+  }
+
+  .works > .section-top {
+    top: 58px;
+    padding: 18px 0 16px;
+  }
+
+  .works > .grid {
+    margin-top: -52px;
+  }
+
+  .works .grid figure,
+  .works .grid figure:nth-child(even) {
+    top: 53%;
+    width: calc(100vw - 28px);
+    height: auto;
+    aspect-ratio: 1.45 / 1;
+  }
+
+  .works .grid figcaption b {
+    font-size: clamp(22px, 7vw, 30px);
+  }
+
+  .quote {
+    min-height: 72svh;
+    padding: 13vh 6vw;
+    font-size: clamp(36px, 10.5vw, 50px);
+  }
+
+  .booking {
+    padding: 11vh 6vw;
+  }
+
+  .booking h2 {
+    margin: 40px 0;
+    font-size: clamp(43px, 12vw, 58px);
+  }
+
+  .booking form {
+    margin-top: 50px;
+    padding: 28px 20px;
+  }
+}
+
+@media (max-width: 430px) {
+  header {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 13.5vw, 58px);
+  }
+
+  .hero-content > p,
+  .hero-content div a,
+  .story-copy p,
+  .section-top {
+    font-size: 8px;
+  }
+
+  .story-sticky {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .story-frame {
+    max-height: calc(100svh - 270px);
+  }
+
+  .story-stage {
+    font-size: 7px;
+  }
+
+  .about-caption {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .about-caption strong {
+    font-size: 19px;
+  }
+
+  .works .section-top p:last-child {
+    display: none;
+  }
+
+  .works .grid figcaption {
+    padding: 72px 14px 15px;
+  }
+
+  .booking form {
+    padding: 24px 17px;
+  }
+
+  footer {
+    align-items: center;
+  }
+}
+
+@media (max-height: 720px) and (min-width: 701px) {
+  header {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero-content {
+    padding-top: 88px;
+    padding-bottom: 34px;
+  }
+
+  .hero h1 {
+    max-width: 720px;
+    margin: 28px 0;
+    font-size: clamp(54px, 10.5vh, 76px);
+  }
+
+  .story-sticky {
+    min-height: 0;
+    padding-top: 70px;
+    padding-bottom: 28px;
+  }
+
+  .story-frame {
+    max-height: 66svh;
+  }
+
+  .works .grid figure,
+  .works .grid figure:nth-child(even) {
+    width: min(76vw, 99vh, 980px);
+  }
+
+  .quote {
+    min-height: 82svh;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 520px) {
+  .hero {
+    min-height: 520px;
+  }
+
+  .hero-content {
+    padding-top: 72px;
+    padding-bottom: 24px;
+  }
+
+  .hero h1 {
+    max-width: 620px;
+    margin: 22px 0;
+    font-size: clamp(44px, 11.5vh, 60px);
+  }
+
+  .hero-content div {
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 24px;
+  }
+
+  .story-sticky {
+    display: grid;
+    grid-template-columns: 32% 1fr;
+    gap: 4%;
+    padding: 64px 5vw 24px;
+  }
+
+  .story-copy h2 {
+    font-size: clamp(30px, 7vh, 40px);
+  }
+
+  .story-frame {
+    max-height: 72svh;
+  }
+
+  .works .grid figure,
+  .works .grid figure:nth-child(even) {
+    top: 54%;
+    width: min(72vw, 105vh, 760px);
+  }
+}

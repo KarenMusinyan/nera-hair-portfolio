@@ -1,0 +1,1 @@
+.story-frame>img{top:50%;transform:translateY(-33%) translateX(calc(var(--story-progress,0)*-66.6667%)) scale(calc(1.04 - var(--story-enter,0)*.04))}@media(max-width:700px){.story-frame>img{top:50%;transform:translateY(-36%) translateX(calc(var(--story-progress,0)*-66.6667%)) scale(calc(1.04 - var(--story-enter,0)*.04))}}
