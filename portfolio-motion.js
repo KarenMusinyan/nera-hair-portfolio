@@ -1,4 +1,5 @@
 const worksSection = document.querySelector('.works');
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const workCards = [...document.querySelectorAll('.works figure')];
 
 function updatePortfolioMotion() {
@@ -17,7 +18,7 @@ function updatePortfolioMotion() {
     card.style.zIndex = String(10 - Math.round(Math.abs(distance) * 2));
     const isActive = index === Math.round(stage);
     card.classList.toggle('is-active', isActive);
-    card.setAttribute('aria-hidden', String(!isActive));
+    card.removeAttribute('aria-hidden');
   });
 }
 

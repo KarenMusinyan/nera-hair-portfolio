@@ -1,0 +1,36 @@
+/* Usability overrides preserve the original editorial direction. */
+:root { color-scheme: dark; }
+::selection { background: #d7653d; color: #fff; }
+input, select { font-size: 16px; caret-color: var(--accent); }
+label { color: #c4bcb2; font-size: 12px; }
+.demo-note { color: #c4bcb2; font-size: 14px !important; line-height: 1.6; letter-spacing: normal !important; }
+output { color: #ffb795; font-size: 14px; line-height: 1.6; }
+footer a { color: var(--ink); text-underline-offset: 5px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, output:focus-visible { outline: 2px solid #ffb795; outline-offset: 5px; }
+.skip-link { position: fixed; top: -100px; left: 16px; z-index: 100; background: var(--ink); color: var(--bg); padding: 14px 20px; }
+.skip-link:focus { top: 16px; }
+section[id] { scroll-margin-top: 80px; }
+.chapter-nav button { min-height: 28px; min-width: 28px; }
+.chapter-nav button:before { top: 14px; }
+@media (max-width: 700px) {
+  .hero-content > p, .hero-content div a, .story-copy p, .section-top { font-size: 11px; }
+  footer { line-height: 1.8; }
+}
+.no-js .intro h2, .no-js .intro article, .no-js .about-visual,
+.no-js .booking form, .no-js .booking h2, .no-js .quote,
+.no-js .section-top, .no-js .story-copy h2 { opacity: 1 !important; filter: none !important; transform: none !important; }
+.no-js .works { height: auto; padding: 100px 6vw; }
+.no-js .works > .grid { display: grid; position: relative; height: auto; margin: 40px auto 0; gap: 32px; }
+.no-js .works .grid figure { position: relative; inset: auto; width: 100%; height: auto; aspect-ratio: 1.65; margin: 0; opacity: 1; transform: none; filter: none; }
+.no-js .works > .section-top { position: relative; top: auto; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .hero-content, .hero-img, .intro h2, .intro article, .about-visual,
+  .booking form, .booking h2, .quote, .section-top, .story-copy h2 { opacity: 1 !important; filter: none !important; transform: none !important; }
+  .ambient-glow, .cinematic-wash, .chapter-nav { display: none; }
+  .works { height: auto; padding: 100px 6vw; }
+  .works > .section-top { position: relative; top: auto; }
+  .works > .grid { display: grid; position: relative; height: auto; margin: 40px auto 0; gap: 32px; }
+  .works .grid figure, .works .grid figure:nth-child(even), .works.cards-focused figure:not(.is-active) { position: relative; inset: auto; width: 100%; height: auto; aspect-ratio: 1.65; margin: 0; opacity: 1 !important; transform: none !important; filter: none !important; }
+}

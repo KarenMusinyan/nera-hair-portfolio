@@ -1,13 +1,18 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" class="no-js">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>NERA — hair studio</title>
+  <title>NERA — сайт парикмахера · портфолио Karen Musinyan</title>
+  <meta name="description" content="Демонстрационный сайт парикмахера: адаптивная вёрстка, галерея преображений и интерактивная форма. Проект Karen Musinyan.">
+  <meta name="theme-color" content="#0c0c0b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="animation.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="about.css"><link rel="stylesheet" href="refine.css"><link rel="stylesheet" href="responsive.css"><link rel="stylesheet" href="crop-fix.css"><link rel="stylesheet" href="modern.css"><link rel="stylesheet" href="revision.css"><link rel="stylesheet" href="polish.css"><link rel="stylesheet" href="cinematic.css"><link rel="stylesheet" href="final-adjustments.css"><link rel="stylesheet" href="adaptive.css">
-</head>
+<link rel="stylesheet" href="usability.css"></head>
 <body>
+  <a class="skip-link" href="#top">Перейти к содержимому</a>
   <header><a class="logo" href="#top">NERA<sup>®</sup></a><nav><a href="#works">работы</a><a href="#about">обо мне</a><a class="button" href="#booking">записаться ↗</a></nav></header>
   <main id="top">
     <section class="hero"><img class="hero-img" src="assets/hero-v2.png" alt="Модель с длинными волосами в салоне" fetchpriority="high" decoding="async"><div class="hero-content"><p>ПАРИКМАХЕР · ЕРЕВАН</p><h1>Твой цвет.<br><i>Твоя форма.</i><br>Твой характер.</h1><div><span>Образ, который подчёркивает тебя<br>и красиво живёт каждый день.</span><a href="#transformation">смотреть преображение ↓</a></div></div></section>
@@ -22,7 +27,7 @@
       <figure class="large lift before-after"><img src="assets/bob-v2.png" alt="До и после стрижки французский боб" loading="lazy" decoding="async"><figcaption>04 <b>French bob</b><small>стрижка</small></figcaption></figure>
     </div></section>
     <section class="quote">«Лучший комплимент — когда<br>спрашивают, <i>кто тебя сделал?»</i></section>
-    <section class="booking" id="booking"><div class="booking-motion" aria-hidden="true"><span class="book-ring outer"></span><span class="book-ring inner"></span><span class="book-line"></span><i></i><i></i><i></i></div><div><p>ЗАПИСЬ</p><h2>Давай создадим<br><i>что-то твоё.</i></h2></div><form id="booking-form"><label>Как тебя зовут?<input required placeholder="Ваше имя"></label><label>Телефон или Telegram<input required placeholder="+374 ··· ··· ···"></label><label>Что хочется сделать?<select><option>Стрижка</option><option>Окрашивание</option><option>Укладка</option><option>Нужна консультация</option></select></label><button>отправить заявку ↗</button><small>Нажимая кнопку, вы соглашаетесь на обработку данных.</small><output></output></form></section>
+    <section class="booking" id="booking"><div class="booking-motion" aria-hidden="true"><span class="book-ring outer"></span><span class="book-ring inner"></span><span class="book-line"></span><i></i><i></i><i></i></div><div><p>ЗАПИСЬ</p><h2>Давай создадим<br><i>что-то твоё.</i></h2></div><form id="booking-form" aria-describedby="demo-note"><p id="demo-note" class="demo-note">Демо-форма: проверьте сценарий записи на вымышленных данных. Заявка не отправляется и не сохраняется.</p><label>Как тебя зовут?<input name="name" required minlength="2" maxlength="80" autocomplete="off" placeholder="Например, Анна"></label><label>Телефон или Telegram<input name="contact" required minlength="5" maxlength="80" autocomplete="off" placeholder="Используйте вымышленные данные"></label><label>Что хочется сделать?<select name="service"><option>Стрижка</option><option>Окрашивание</option><option>Укладка</option><option>Нужна консультация</option></select></label><button type="submit">проверить запись ↗</button><output aria-live="polite" tabindex="-1"></output><noscript><p>Для проверки демо-формы включите JavaScript. Настоящая запись здесь не принимается.</p></noscript></form></section>
   </main>
-  <footer><a class="logo" href="#top">NERA<sup>®</sup></a><span>INSTAGRAM · TELEGRAM</span><span>© 2026</span></footer><script src="script.js"></script><script src="motion.js"></script><script src="portfolio-motion.js"></script><script src="cinematic.js"></script>
+  <footer><a class="logo" href="#top">NERA<sup>®</sup></a><a href="https://github.com/KarenMusinyan">Разработка — Karen Musinyan ↗</a><span>© 2026 · Демонстрационный проект</span></footer><script src="script.js"></script><script src="motion.js"></script><script src="portfolio-motion.js"></script><script src="cinematic.js"></script>
 </body></html>
