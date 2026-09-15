@@ -1,6 +1,6 @@
 # NERA — Hair Stylist Website
 
-**[View demo](https://nera-hair-portfolio.karenmusinyan384.chatgpt.site)** · [Developer](https://github.com/KarenMusinyan)
+**[View demo](https://karenmusinyan.github.io/nera-hair-portfolio/)** · [Developer](https://github.com/KarenMusinyan)
 
 A concept website for a hairstylist: visitors explore transformations, browse a portfolio and try an appointment form. This is a portfolio demonstration, not a real salon or commissioned client project. Images are generated concept assets.
 
